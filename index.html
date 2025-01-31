@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
+  <!-- Fontawesome CDN -->
+  <script src="https://kit.fontawesome.com/d16a95f6f1.js" crossorigin="anonymous"></script>
+
   <!-- DaisyUI CDN -->
   <link
     rel="stylesheet"
@@ -53,10 +56,28 @@
   <!-- Header Section -->
   <header>
     <!-- Nav Section -->
-     <nav class="bg-secondary">
-      <div class="navbar max-w-[1320px] mx-auto">
+    <nav class="bg-secondary md:mb-20">
+      <div class="navbar max-w-[1320px] mx-auto justify-between">
         <!-- Navbar Start Section -->
         <div class="navbar-start">
+          <a class="btn btn-ghost text-xl font-normal gap-3">
+            <img src="assets/logo-header.png" alt="">
+            <span class="hidden md:block text-2xl">
+              Browse<span class="text-accent">4</span>Pets
+            </span>
+          </a>
+        </div>
+
+        <!-- Navbar Center Section -->
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 gap-8 text-xl">
+            <li><a class="px-0">Find a pet</a></li>
+            <li><a class="px-0">Breeds</a></li>
+            <li><a class="px-0">Contact us</a></li>
+          </ul>
+        </div>
+
+        <!-- Navbar End Section -->              
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg
@@ -80,29 +101,125 @@
               <li><a>Contact us</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">
-            <img src="assets/logo-header.png" alt=""><span>Browse4Pets</span>
-          </a>
+          <!-- navbar end er sob item ke hidden and navbar keo hidden and container a justify between -->
+          <div class="navbar-end gap-4 text-xl flex-row">
+            <i class="fa-regular fa-bell text-2xl"></i>
+            <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+            <a class="btn px-7 py-[10px] text-xl font-normal border border-accent">Login</a>
+            <a class="btn px-7 py-[10px] bg-accent text-xl font-normal">Register</a>
+          </div>
+      </div>
+    </nav> 
+     
+     <!-- Hero Section -->
+    <section class="md:mb-32">
+      <!-- Text and Img Wrapper -->
+      <div class="border border-red-800 relative max-w-[1320px] lg:h-[750px] mx-auto overflow-hidden">
+        <!-- Background Image (Full Width & Top 0) -->
+        <div class="absolute top-0 left-0 w-full h-full">
+          <img src="assets/cat-big.png" alt="Background Image" class="w-full h-full object-cover">
         </div>
 
-        <!-- Navbar Center Section -->
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Find a pet</a></li>
-            <li><a>Breeds</a></li>
-            <li><a>Contact us</a></li>
-          </ul>
-        </div>
-
-        <!-- Navbar End Section -->
-        <div class="navbar-end">
-          <a class="btn">Button</a>
+        <!-- Content Wrapper (Text Above Image) -->
+        <div class="relative z-10 p-5 h-1/2 max-w-[681px]">
+          <h1 class="text-[56px] font-adlam mb-3">
+            Pamper Your Pet, Because They Deserve the Bes
+          </h1>
+          <p class="text-xl leading-9 mb-6">
+            Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!
+          </p>
+          <a class="btn px-7 py-[10px] bg-accent text-xl font-normal">Find a pet</a>
         </div>
       </div>
-     </nav>
+    </section>
 
-     <!-- Hero Section -->
-      <div></div>
+    <!-- Browse Categories Section -->
+     <section class="max-w-[1320px] mx-auto">
+      <!-- Browse Section Wrapper -->
+      <div class="px-4">
+        <h2 class="text-4xl font-adlam mb-12">Browse By Categories</h2>
+        <!-- Card Container -->
+        <div class="grid grid-cols-2 md:grid-cols-6 justify-center gap-[10px] md:gap-6 w-full">
+          <!-- Card 1 -->
+          <div class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl">
+            <!-- Card Img -->
+            <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
+              <img class="w-full" src="assets/dog-cartoon.png" alt="">
+            </div>
+            <!-- Card Text -->
+             <div class="text-center space-y-3">
+              <h4 class="font-adlam text-xl">Dog</h4>
+              <p class="">3 items</p>
+             </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl">
+            <!-- Card Img -->
+            <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
+              <img class="w-full" src="assets/fish-cartoon.png" alt="">
+            </div>
+            <!-- Card Text -->
+             <div class="text-center space-y-3">
+              <h4 class="font-adlam text-xl">Fish</h4>
+              <p class="">3 items</p>
+             </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl">
+            <!-- Card Img -->
+            <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
+              <img class="w-full" src="assets/cat-cartoon.png" alt="">
+            </div>
+            <!-- Card Text -->
+             <div class="text-center space-y-3">
+              <h4 class="font-adlam text-xl">Cat</h4>
+              <p class="">3 items</p>
+             </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl">
+            <!-- Card Img -->
+            <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
+              <img class="w-full" src="assets/bird-cartoon.png" alt="">
+            </div>
+            <!-- Card Text -->
+             <div class="text-center space-y-3">
+              <h4 class="font-adlam text-xl">Birds</h4>
+              <p class="">3 items</p>
+             </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl">
+            <!-- Card Img -->
+            <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
+              <img class="w-full" src="assets/mouse-cartoon.png" alt="">
+            </div>
+            <!-- Card Text -->
+             <div class="text-center space-y-3">
+              <h4 class="font-adlam text-xl">Small pet</h4>
+              <p class="">3 items</p>
+             </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl">
+            <!-- Card Img -->
+            <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
+              <img class="w-full" src="assets/rabbit-cartoon.png" alt="">
+            </div>
+            <!-- Card Text -->
+             <div class="text-center space-y-3">
+              <h4 class="font-adlam text-xl">Rabit</h4>
+              <p class="">3 items</p>
+             </div>
+          </div>
+        </div>
+      </div>
+     </section>
   </header>
 
   <!-- Main Section -->
