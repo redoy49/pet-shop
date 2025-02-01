@@ -63,7 +63,7 @@
     <!-- Header Section -->
     <header>
       <!-- Nav Section -->
-      <nav class="bg-secondary px-0 py-4 md:mb-[72px]">
+      <nav class="bg-secondary px-0 md:py-4 md:mb-[72px] border-b-8 md:border-none">
         <div class="navbar max-w-[1320px] mx-auto justify-between">
           <!-- Navbar Start Section -->
           <div class="navbar-start">
@@ -76,7 +76,7 @@
           </div>
 
           <!-- Navbar Center Section -->
-          <div class="navbar-center hidden lg:flex">
+          <div class="navbar-center hidden md:block lg:flex">
             <ul class="menu menu-horizontal px-1 gap-8 text-xl">
               <li><a class="px-0">Find a pet</a></li>
               <li><a class="px-0">Breeds</a></li>
@@ -85,54 +85,49 @@
           </div>
 
           <!-- Navbar End Section -->
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          <div class="navbar-end text-xl">
+            <div class="hidden md:block  space-x-4">
+              <i class="fa-regular fa-bell text-2xl"></i>
+              <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+              <a
+                class="btn px-7 py-[10px] text-xl font-normal bg-transparent border border-accent"
+                >Login</a
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+              <a class="btn px-7 py-[10px] bg-accent text-xl font-normal"
+                >Register</a
+              >
             </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              <li><a>Find a pet</a></li>
-              <li><a>Breeds</a></li>
-              <li><a>Contact us</a></li>
-            </ul>
-          </div>
-          <!-- navbar end er sob item ke hidden and navbar keo hidden and container a justify between -->
-          <div class="navbar-end gap-4 text-xl flex-row">
-            <i class="fa-regular fa-bell text-2xl"></i>
-            <i class="fa-solid fa-magnifying-glass text-2xl"></i>
-            <a
-              class="btn px-7 py-[10px] text-xl font-normal border border-accent"
-              >Login</a
-            >
-            <a class="btn px-7 py-[10px] bg-accent text-xl font-normal"
-              >Register</a
-            >
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="dropdown md:hidden">
+              <div tabindex="0" role="button" class="btn btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
 
       <!-- Hero Section -->
-      <section class="md:mb-32">
+      <section class="mb-[56px] md:mb-32">
         <!-- Text and Img Wrapper -->
         <div
-          class="border border-red-800 relative max-w-[1320px] lg:h-[750px] mx-auto overflow-hidden"
+          class="border border-red-800 relative max-w-[1320px] h-[450px] lg:h-[750px] mx-auto overflow-hidden"
         >
-          <!-- Background Image (Full Width & Top 0) -->
+          <!-- Image container -->
           <div class="absolute bottom-0 right-0 w-full">
             <img
               src="assets/cat-big.png"
@@ -141,16 +136,17 @@
             />
           </div>
 
-          <!-- Content Wrapper (Text Above Image) -->
-          <div class="relative z-10 p-5 h-1/2 max-w-[681px]">
-            <h1 class="text-[56px] font-adlam mb-3">
+          <!-- Content Wrapper -->
+          <div class="relative z-10 p-4 h-1/2 max-w-[681px]">
+            <h1 class="text-[30px] md:text-[56px] font-adlam mb-3 pr-4">
               Pamper Your Pet, Because They Deserve the Bes
             </h1>
-            <p class="text-xl leading-9 mb-6">
+            <p class="md:text-xl md:leading-9 mb-6 pr-6">
               Discover a world of treats, toys, and essentials handpicked for
               your furry friends. Shop now and make tails wag with joy!
             </p>
-            <a class="btn px-7 py-[10px] bg-accent text-xl font-normal"
+            <a
+              class="btn px-7 py-[10px] bg-accent text-base md:text-xl font-normal animate-bounce"
               >Find a pet</a
             >
           </div>
@@ -161,17 +157,19 @@
     <!-- Main Section -->
     <main>
       <!-- Categories Section -->
-      <section class="max-w-[1320px] mx-auto mb-28">
+      <section class="max-w-[1320px] mx-auto mb-14 md:mb-28">
         <!-- Categories Section Wrapper -->
         <div class="px-4">
-          <h2 class="text-2xl md:text-4xl font-adlam mb-12">Browse By Categories</h2>
+          <h2 class="text-2xl md:text-4xl font-adlam mb-8 md:mb-12">
+            Browse By Categories
+          </h2>
           <!-- Card Container -->
           <div
             class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-center gap-[10px] md:gap-6 w-full"
           >
             <!-- Card 1 -->
             <div
-              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl max-w-[200px] max-h-[254px]"
+              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] py-9 rounded-xl max-w-[200px] max-h-[254px]"
             >
               <!-- Card Img -->
               <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
@@ -186,7 +184,7 @@
 
             <!-- Card 2 -->
             <div
-              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl max-w-[200px] max-h-[254px]"
+              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] py-9 rounded-xl max-w-[200px] max-h-[254px]"
             >
               <!-- Card Img -->
               <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
@@ -201,7 +199,7 @@
 
             <!-- Card 3 -->
             <div
-              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl max-w-[200px] max-h-[254px]"
+              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] py-9 rounded-xl max-w-[200px] max-h-[254px]"
             >
               <!-- Card Img -->
               <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
@@ -216,7 +214,7 @@
 
             <!-- Card 4 -->
             <div
-              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl max-w-[200px] max-h-[254px]"
+              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] py-9 rounded-xl max-w-[200px] max-h-[254px]"
             >
               <!-- Card Img -->
               <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
@@ -231,7 +229,7 @@
 
             <!-- Card 5 -->
             <div
-              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl max-w-[200px] max-h-[254px]"
+              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] py-9 rounded-xl max-w-[200px] max-h-[254px]"
             >
               <!-- Card Img -->
               <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
@@ -246,7 +244,7 @@
 
             <!-- Card 6 -->
             <div
-              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] px-12 py-9 rounded-xl max-w-[200px] max-h-[254px]"
+              class="flex flex-col gap-6 items-center justify-center bg-[#F9DF8A] py-9 rounded-xl max-w-[200px] max-h-[254px]"
             >
               <!-- Card Img -->
               <div class="bg-white w-[104px] h-[104px] p-7 rounded-full">
@@ -263,10 +261,12 @@
       </section>
 
       <!-- Trending Products Section -->
-      <section class="bg-secondary mb-28">
+      <section class="bg-secondary mb-14 md:mb-28">
         <!-- Trending Products Wrapper -->
-        <div class="max-w-[1320px] mx-auto py-32 px-4">
-          <h2 class="text-2xl md:text-4xl font-adlam mb-12">Trending Pet Products</h2>
+        <div class="max-w-[1320px] mx-auto py-14 md:py-32 px-4">
+          <h2 class="text-2xl md:text-4xl font-adlam mb-8 md:mb-12">
+            Trending Pet Products
+          </h2>
           <!-- Pet Products row -->
           <div class="flex flex-col md:flex-row gap-6">
             <!-- T-shirt for dog -->
@@ -294,11 +294,11 @@
             <!-- Grid Container -->
             <div class="grid gap-3 md:gap-5 grid-cols-2 lg:grid-cols-3 flex-1">
               <!-- Grid card 1 -->
-              <div class="flex gap-4 bg-white rounded-xl px-4 py-5 border">
+              <div class="flex items-center gap-4 bg-white rounded-xl px-4 py-5 border">
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/dog-cartoon.png"
                     alt=""
                   />
@@ -307,20 +307,20 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
 
               <!-- Grid card 2 -->
-              <div class="flex gap-4 bg-white rounded-xl px-4 py-5 border">
+              <div class="flex items-center gap-4 bg-white rounded-xl px-4 py-5 border">
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/fish-cartoon.png"
                     alt=""
                   />
@@ -329,20 +329,20 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
 
               <!-- Grid card 3 -->
-              <div class="flex gap-4 bg-white rounded-xl px-4 py-5 border">
+              <div class="flex items-center gap-4 bg-white rounded-xl px-4 py-5 border">
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/bird-cartoon.png"
                     alt=""
                   />
@@ -351,20 +351,20 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
 
               <!-- Grid card 4 -->
-              <div class="flex gap-4 bg-white rounded-xl px-4 py-5 border">
+              <div class="flex items-center gap-4 bg-white rounded-xl px-4 py-5 border">
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/rabbit-cartoon.png"
                     alt=""
                   />
@@ -373,20 +373,20 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
 
               <!-- Grid card 5 -->
-              <div class="flex gap-4 bg-white rounded-xl px-4 py-5 border">
+              <div class="flex items-center gap-4 bg-white rounded-xl px-4 py-5 border">
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/bird-cartoon.png"
                     alt=""
                   />
@@ -395,20 +395,20 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
 
               <!-- Grid card 6 -->
-              <div class="flex gap-4 bg-white rounded-xl px-4 py-5 border">
+              <div class="flex items-center gap-4 bg-white rounded-xl px-4 py-5 border">
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/pet-couch.png"
                     alt=""
                   />
@@ -417,20 +417,20 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
 
               <!-- Grid card 7 -->
-              <div class="flex gap-4 bg-white rounded-xl px-4 py-5 border">
+              <div class="flex items-center gap-4 bg-white rounded-xl px-4 py-5 border">
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/fish-cartoon.png"
                     alt=""
                   />
@@ -439,20 +439,20 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
 
               <!-- Grid card 8 -->
-              <div class="flex gap-4 bg-white rounded-xl px-4 py-5 border">
+              <div class="flex items-center gap-4 bg-white rounded-xl px-4 py-5 border">
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/pet-couch.png"
                     alt=""
                   />
@@ -461,22 +461,22 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
 
               <!-- Grid card 9 -->
               <div
-                class="hidden md:flex gap-4 bg-white rounded-xl px-4 py-5 border"
+                class="hidden md:flex items-center gap-4 bg-white rounded-xl px-4 py-5 border"
               >
                 <!-- Image container -->
                 <div class="max-w-[86px] max-h-[86px]">
                   <img
-                    class="w-full p-5 bg-secondary rounded-xl"
+                    class="w-full p-3 md:p-5 bg-secondary rounded-xl"
                     src="assets/rabbit-cartoon.png"
                     alt=""
                   />
@@ -485,11 +485,11 @@
                 <!-- Text content -->
                 <div>
                   <div class="flex gap-3">
-                    <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-                    <span>4.5</span>
+                    <i class="fa-solid fa-star text-xs md:text-base" style="color: #ffd43b"></i>
+                    <span class="text-xs md:text-base">4.5</span>
                   </div>
-                  <h3 class="text-xl font-medium">Pet Bed</h3>
-                  <p class="font-medium">$39.99</p>
+                  <h3 class="text-sm md:text-xl font-medium">Pet Bed</h3>
+                  <p class="text-xs md:text-base font-medium">$39.99</p>
                 </div>
               </div>
             </div>
@@ -501,7 +501,7 @@
       <section class="max-w-[1320px] font-adlam mx-auto mb-[440px]">
         <!-- Price Section Container -->
         <div class="px-4">
-          <h2 class="text-2xl md:text-4xl mb-12">Everyday low Price</h2>
+          <h2 class="text-2xl md:text-4xl mb-8 md:mb-12">Everyday low Price</h2>
           <!-- Price Section Row -->
           <div class="flex flex-col md:flex-row gap-6">
             <!-- Price Section Column 1 -->
@@ -552,7 +552,7 @@
     <section class="bg-[#ffdc26]/50 relative">
       <!-- Footer wrapper -->
       <footer
-        class="footer justify-between max-w-[1320px] mx-auto text-base-content p-4 border border-black pt-[360px]  md:pt-80 pb-16 md:pb-32 content-center items-end"
+        class="footer justify-between max-w-[1320px] mx-auto text-base-content p-4 border border-black pt-[360px] md:pt-80 pb-16 md:pb-32 content-center items-end"
       >
         <!-- Footer Start -->
         <div class="gap-4 md:gap-7">
@@ -589,8 +589,10 @@
       </footer>
 
       <!-- NewsLetter Section -->
-      <section class="md:w-[1320px] mx-auto absolute p-4 md:p-0 -top-1/2 md:left-[139px] ">
-        <div class="bg-[#fff9f4] rounded-2xl p-4">
+      <section
+        class="md:w-[1320px] mx-auto absolute p-3 md:p-0 -top-1/2 md:left-[139px]"
+      >
+        <div class="bg-[#fff9f4] rounded-2xl p-3">
           <div
             class="flex md:gap-24 items-center justify-around flex-col lg:flex-row"
           >
@@ -602,15 +604,17 @@
             </div>
 
             <!-- Text  content -->
-            <div class="flex-1 text-center md:text-left pb-8">
-              <h1 class="text-[22px] md:text-4xl font-adlam mb-3">Get Pawsome News!</h1>
+            <div class="flex-1 text-center md:text-left pb-8 px-3">
+              <h1 class="text-[22px] md:text-4xl font-adlam mb-3">
+                Get Pawsome News!
+              </h1>
               <p class="md:text-xl md:py-6 p-1 mb-5">
                 Exclusive training tips, ticks, product deals and more.
               </p>
               <input
                 type="email"
                 placeholder="Enter email"
-                class="input w-full max-w-md mb-3 md:mb-9 md:py-8"
+                class="input w-full max-w-md mb-3 md:mb-9 md:py-7"
               /><br />
               <a class="btn px-7 py-[10px] bg-accent md:text-xl font-normal"
                 >Subscribe</a
